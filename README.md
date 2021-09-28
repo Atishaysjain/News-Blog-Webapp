@@ -24,6 +24,13 @@
 * Bootstrap
     * Necessary bootstrap is used
 
+## Screenshots 📷
+ <p float="left">
+ <img src ="images/news_page.png"/>     
+ <img src ="images/blog_page.png"/>  
+ <img src ="images/profile_page.png"/>   
+ </p>
+
 ## Getting Started
 - Clone this repository
    ```Shell
