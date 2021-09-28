@@ -26,9 +26,10 @@
 
 ## Screenshots 📷
  <p float="left">
- <img src ="images/news_page.png" width="500" height="500" />     
- <img src ="images/blog_page.png" width="500" height="500" />  
- <img src ="images/profile_page.png" width="500" height="500" />   
+ <i><b>News page</i></b>
+ <img src ="images/news_page.png" width="916" height="492" />     
+ <img src ="images/blog_page.png" width="917" height="470" />  
+ <img src ="images/profile_page.png" width="910" height="440" />   
  </p>
 
 ## Getting Started 🛠
