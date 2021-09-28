@@ -1,6 +1,7 @@
 ## News and Blog Web Application
 
 ## Demo 
+* Linked to the deployed Heroku webapp :- https://news-blog-webapp.herokuapp.com/
 * Link with demo of all functionalities of the webapp :- https://drive.google.com/file/d/1nIiDDZsOXCWMEb9r9JRhIc2HLaCdL8Ek/view?usp=sharing
 
 ## Overview
@@ -29,10 +30,11 @@
    git clone git@github.com:Atishaysjain/News-Blog-Webapp.git;
    ```
    
-- Build environment
+- Create a virtual environment
   ```Shell
-   conda env create -f environment.yml
-   conda activate django_1
+   virtualenv venev_name -p python3.8
+   source ./venev_name/bin/activate
+   pip install -r requirements.txt
   ```
 
 ## Adding your secret key, email and password (Ubuntu)
@@ -50,6 +52,8 @@
 * Add the following code to your .bashrc file
     ```Shell
     export DJANGO_NEWS_BLOG_WEBAPP_SECRET_KEY="YOUR_SECRET_KEY" # Secret key 
+    # This email will be used to send the link to reset password 
     export EMAIL_USER="YOUR_EMAIL_ID"
     export EMAIL_PASS="YOUR_EMAIL_PASSWORD"
     ```
+
