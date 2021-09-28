@@ -4,7 +4,7 @@
 * Linked to the deployed Heroku webapp :- https://news-blog-webapp.herokuapp.com/
 * Link with demo of all functionalities of the webapp :- https://drive.google.com/file/d/1nIiDDZsOXCWMEb9r9JRhIc2HLaCdL8Ek/view?usp=sharing
 
-## Overview
+## Overview 🎯
 *  Authentication
     * User login, logout
     * User registration
@@ -26,12 +26,12 @@
 
 ## Screenshots 📷
  <p float="left">
- <img src ="images/news_page.png"/>     
- <img src ="images/blog_page.png"/>  
- <img src ="images/profile_page.png"/>   
+ <img src ="images/news_page.png" width="60" height="60" />     
+ <img src ="images/blog_page.png" width="60" height="60" />  
+ <img src ="images/profile_page.png" width="60" height="60" />   
  </p>
 
-## Getting Started
+## Getting Started 🛠
 - Clone this repository
    ```Shell
    git clone git@github.com:Atishaysjain/News-Blog-Webapp.git;
