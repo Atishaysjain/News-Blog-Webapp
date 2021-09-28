@@ -27,8 +27,13 @@
 ## Screenshots 📷
  <p float="left">
  <i><b>News page</i></b>
- <img src ="images/news_page.png" width="916" height="492" />     
+ <br>
+ <img src ="images/news_page.png" width="916" height="492" />
+ <i><b>Blog page</i></b>
+ <br>     
  <img src ="images/blog_page.png" width="917" height="470" />  
+ <i><b>Profile page</i></b>
+ <br>
  <img src ="images/profile_page.png" width="910" height="440" />   
  </p>
 
