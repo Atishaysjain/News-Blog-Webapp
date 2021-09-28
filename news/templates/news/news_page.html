@@ -1,0 +1,253 @@
+<!-- From old news page :- -->
+{% load static %}
+<!-- till old news page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>News App</title>
+  <!-- From old news page :- -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <!-- till old news page -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- From old news page :- -->
+  <link rel="stylesheet" type="text/css" href="{% static 'news/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'news/aos.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'news/style.css' %}">
+  <script src="{% static 'news/script.js' %}"></script>
+  <!-- till old news page -->
+
+</head>
+<body>
+
+    <div class="container-scroller" style="position:sticky;top:0px;z-index:200;">
+        <div class="main-panel">
+          <header id="header">
+            <div class="container">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="navbar-top">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <ul class="navbar-top-right-menu">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{% url 'users-profile' %}" class="nav-link">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{% url 'blog-home' %}" class="nav-link">Blogs</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{% url 'users-logout' %}" class="nav-link">Logout</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="navbar-bottom">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                      <div class="navbar-collapse justify-content-center collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav d-lg-flex justify-content-between align-items-center">
+                          <li>
+                            <button class="navbar-close">
+                              <i class="mdi mdi-close"></i>
+                            </button>
+                          </li>
+                          <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'news-news_page' %}">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'news-news_page' %}?search={{search}}&domains=indianexpress.com">Indian Express</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'news-news_page' %}?search={{search}}&domains=hindustantimes.com">Hindustan Times</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'news-news_page' %}?search={{search}}&domains=cnbc.com">CNBC</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'news-news_page' %}?search={{search}}&domains=wsj.com">The Wall Sreet Journal</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'news-news_page' %}?search={{search}}&domains=ndtv.com">NDTV</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <ul class="social-media">
+                      <a href="https://linkedin.com/in/atishay-jain-361593199" rel="nofollow"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/atishay-jain" height="30" width="40" style="max-width: 100%;"/>
+                      </a>
+                      <a href="https://twitter.com/Atishaysjain" rel="nofollow"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" height="30" width="40" style="max-width: 100%;"/>
+                      </a>
+                      <a href="https://instagram.com/atishay.s.jain" rel="nofollow"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" height="30" width="40" style="max-width: 100%;"/>
+                      </a>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </header>
+  
+          <div class="flash-news-banner">
+            <div class="container">
+              <div class="d-lg-flex align-items-right justify-content-between">
+                <div class="d-flex" id = 'date-time'>
+                  <span class="text-danger" style="margin-left: 900px;">{% now "jS F Y H:i" %}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="sidebar">
+        <a href="{% url 'news-news_page' %}">Home</a>
+        <a href="{% url 'news-news_page' %}?search=Business&domains={{domains}}">Business</a>
+        <a href="{% url 'news-news_page' %}?search=Technology&domains={{domains}}">Technology</a>
+        <a href="{% url 'news-news_page' %}?search=Entertainment&domains={{domains}}">Entertainment</a>
+        <a href="{% url 'news-news_page' %}?search=Sports&domains={{domains}}">Sports</a>
+        <a href="{% url 'news-news_page' %}?search=Science&domains={{domains}}">Science</a>
+        <a href="{% url 'news-news_page' %}?search=Health&domains={{domains}}">Health</a>
+    </div>
+
+    <div class="container" id="articles-container">
+        {% for value in data %}
+        <div class="card mb-3 box" style="max-width: 640px; margin:auto;">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{{value.url}}" target="_blanck">{{value.title}}</a></h5>
+                        <p class="card-text">{{value.description}}</p>
+                        <p class="card-text"><small class="text-muted">{{value.publishedat}}</small></p>
+                        <p class="card-text"><small><span class = "badge badge-dark mr-3">{{value.source.name}}</span></small></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 img-box">
+                    <a href="{{value.url}}" target="_blanck">
+                    <img src="{{value.image}}" class="card-img" alt="..." height="100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 id="loading">Loading....</h1>
+
+</body>
+<style>
+.sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    top: 130px;
+    left: 0px;
+}
+.sidebar a{
+    width: 250px;
+    display: block;
+    margin: 24px 0px;
+    padding: 10px 5px;
+    font-weight: bolder;
+    font-size: large;
+    text-decoration: none;
+    background-color: #3a23a1bd;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 0.5px 1px grey;
+    text-align: center;
+}
+#articles-container{
+    margin-left: 250px;
+}
+.box{
+    transition-property: box-shadow, transform;
+    transition-duration: 1s;
+}
+.box:hover{
+    /* box-shadow: 2px 2px 5px #8080807a; */
+    box-shadow: 1px 2px 8px 0px #00bcffb0;
+    transform: translateY(-9px);
+}
+.img-box{
+    padding: 20px;
+}
+.img-box img{
+    border-radius: 15px;
+    object-fit: cover;
+}
+#loading{
+    text-align: center;
+    display: none;
+}
+</style>
+<script>
+
+$(document).ready(function() {
+    console.log( "ready!" );
+    el = document.getElementsByClassName("text-muted")
+    for (i = 0; i < el.length; i++) {
+        t = document.getElementsByClassName("text-muted")[i].innerText
+        var d = new Date(t)
+        document.getElementsByClassName("text-muted")[i].innerText = d.toDateString()
+    }
+});
+var page = 2;
+var window_scroll = true;
+var search = "{{ search }}";
+
+window.addEventListener('scroll', function(e) {
+    // scroll check
+    console.log("scroll check...")
+    if(window_scroll){
+        if((window.innerHeight + window.scrollY) >= (document.body.scrollHeight-200)){
+            window_scroll = false;
+            document.getElementById("loading").style.display = "block";
+            $.ajax({
+                url: '/next?page=' + page + '&search=' + search,
+                dataType: 'json',
+                success: function (data) {
+                    if (data["success"]) {
+                        articles = data["data"]
+                        articles_html = ''
+                        for (i = 0; i < articles.length; i++) {
+                            articles_html += ' \
+                            <div class="card mb-3 box" style="max-width: 640px; margin:auto;">\
+                                <div class="row">\
+                                    <div class="col-md-8">\
+                                        <div class="card-body">\
+                                            <h5 class="card-title"><a href="'+ articles[i]["url"] +'" target="_blanck">'+ articles[i]["title"] +'</a></h5>\
+                                            <p class="card-text">'+ articles[i]["description"] +'</p>\
+                                            <p class="card-text"><small class="text-muted">'+ articles[i]["publishedat"] +'</small></p>\
+                                        </div>\
+                                    </div>\
+                                            \
+                                    <div class="col-md-4 img-box">\
+                                        <img src="'+ articles[i]["image"] +'" class="card-img" alt="..." height="100%">\
+                                    </div>\
+                                </div>\
+                            </div>\
+                            '
+                        }
+                        $("#articles-container").append(articles_html);
+                        page += 1
+                        window_scroll = true;
+                        document.getElementById("loading").style.display = "none";
+                    }
+                    else {
+                        console.log("Failed")
+                        window_scroll = true;
+                        document.getElementById("loading").style.display = "none";
+                    }
+                }
+            });
+        }
+    }
+})
+</script>
+</html>
