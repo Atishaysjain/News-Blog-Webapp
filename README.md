@@ -1,9 +1,8 @@
 ## News and Blog Web Application
 
 ## Demo 
-* Linked to the deployed Heroku webapp :- https://news-blog-webapp.herokuapp.com/
-* Link with demo of all functionalities of the webapp :- https://drive.google.com/file/d/1nIiDDZsOXCWMEb9r9JRhIc2HLaCdL8Ek/view?usp=sharing
-
+* Link to the deployed Heroku webapp :- https://news-blog-webapp.herokuapp.com/
+* Link with demo of all functionalities of the webapp :- [video_demo_link](https://drive.google.com/file/d/1dyBdigtytksECAdX0VqO2X0X7DIqOFXQ/view?usp=sharing)
 ## Overview 🎯
 *  Authentication
     * User login, logout
